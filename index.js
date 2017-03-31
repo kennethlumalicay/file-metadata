@@ -10,7 +10,7 @@ app.post("/upload", upload.single("file"), function(req, res, next) {
 	if(req.file) {
 		res.json({size: req.file.size});
 	} else {
-		res.send({err: "File not found."});
+		res.json({err: "File not found."});
 	}
 });
 app.listen(process.env.PORT || 3000);
