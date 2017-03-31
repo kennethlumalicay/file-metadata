@@ -2,8 +2,8 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Timestamp Microservice</title>
-    <meta name="description" content="Timestamp Microservice">
+	<title>File Metadata Microservice</title>
+    <meta name="description" content="File Metadata Microservice">
 </head>
 <body style="font-family: Helvetica, sans-serif; font-size: 20px">
 	<main>
@@ -16,11 +16,14 @@
 			</ol>
 		</section>
 		<section>
-			<h2>Choose a file and click submit.</h2>
-			<label for="fileUp">Upload</label>
-			<input type="file" id="fileUp">
-			<button id="submit">Submit</button>
+			<form enctype="multipart/form-data" action="/upload" method="post">
+				<p>Choose a file and click submit.</p>
+				<label for="fileUp">Upload</label>
+				<input type="file" id="fileUp" name="file">
+				<input type="submit" id="submit">
+			</form>
 		</section>
+		<br>
 		<footer>App made by <a href="https://kennethlumalicay.github.io/portfolio/" style="text-decoration: none">Kenneth Lu Malicay</a></footer>
 	</main>
 </body>
